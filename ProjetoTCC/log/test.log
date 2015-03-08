@@ -1,0 +1,390 @@
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: persistence.xml
+[DTDEntityResolver,DEBUG] trying to resolve system-id [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd]
+[EJB3DTDEntityResolver,DEBUG] recognized EJB3 ORM namespace; attempting to resolve on classpath under org/hibernate/ejb
+[EJB3DTDEntityResolver,DEBUG] located [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd] in classpath
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: charters
+[DTDEntityResolver,DEBUG] trying to resolve system-id [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd]
+[EJB3DTDEntityResolver,DEBUG] recognized EJB3 ORM namespace; attempting to resolve on classpath under org/hibernate/ejb
+[EJB3DTDEntityResolver,DEBUG] located [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd] in classpath
+[Ejb3Configuration,DEBUG] Detect class: true; detect hbm: true
+[AbstractJarVisitor,DEBUG] Searching mapped entities in jar/par: file:/C:/Users/Maciel%20B/workspace-web/ProjetoTCC/bin
+[AbstractJarVisitor,DEBUG] Filtering: dao.CharterDao
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: charters
+[DTDEntityResolver,DEBUG] trying to resolve system-id [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd]
+[EJB3DTDEntityResolver,DEBUG] recognized EJB3 ORM namespace; attempting to resolve on classpath under org/hibernate/ejb
+[EJB3DTDEntityResolver,DEBUG] located [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd] in classpath
+[Ejb3Configuration,DEBUG] Detect class: true; detect hbm: true
+[AbstractJarVisitor,DEBUG] Searching mapped entities in jar/par: file:/C:/Users/Maciel%20B/workspace-web/ProjetoTCC/bin
+[AbstractJarVisitor,DEBUG] Filtering: dao.CharterDao
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: charters
+[DTDEntityResolver,DEBUG] trying to resolve system-id [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd]
+[EJB3DTDEntityResolver,DEBUG] recognized EJB3 ORM namespace; attempting to resolve on classpath under org/hibernate/ejb
+[EJB3DTDEntityResolver,DEBUG] located [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd] in classpath
+[Ejb3Configuration,DEBUG] Detect class: true; detect hbm: true
+[AbstractJarVisitor,DEBUG] Searching mapped entities in jar/par: file:/C:/Users/Maciel%20B/workspace-web/ProjetoTCC/bin
+[AbstractJarVisitor,DEBUG] Filtering: dao.CharterDao
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: charters
+[DTDEntityResolver,DEBUG] trying to resolve system-id [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd]
+[EJB3DTDEntityResolver,DEBUG] recognized EJB3 ORM namespace; attempting to resolve on classpath under org/hibernate/ejb
+[EJB3DTDEntityResolver,DEBUG] located [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd] in classpath
+[Ejb3Configuration,DEBUG] Detect class: true; detect hbm: true
+[AbstractJarVisitor,DEBUG] Searching mapped entities in jar/par: file:/C:/Users/Maciel%20B/workspace-web/ProjetoTCC/bin
+[AbstractJarVisitor,DEBUG] Filtering: dao.CharterDao
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: charters
+[DTDEntityResolver,DEBUG] trying to resolve system-id [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd]
+[EJB3DTDEntityResolver,DEBUG] recognized EJB3 ORM namespace; attempting to resolve on classpath under org/hibernate/ejb
+[EJB3DTDEntityResolver,DEBUG] located [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd] in classpath
+[Ejb3Configuration,DEBUG] Detect class: true; detect hbm: true
+[AbstractJarVisitor,DEBUG] Searching mapped entities in jar/par: file:/C:/Users/Maciel%20B/workspace-web/ProjetoTCC/bin
+[AbstractJarVisitor,DEBUG] Filtering: dao.CharterDao
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: charters
+[DTDEntityResolver,DEBUG] trying to resolve system-id [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd]
+[EJB3DTDEntityResolver,DEBUG] recognized EJB3 ORM namespace; attempting to resolve on classpath under org/hibernate/ejb
+[EJB3DTDEntityResolver,DEBUG] located [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd] in classpath
+[Ejb3Configuration,DEBUG] Detect class: true; detect hbm: true
+[AbstractJarVisitor,DEBUG] Searching mapped entities in jar/par: file:/C:/Users/Maciel%20B/workspace-web/ProjetoTCC/bin
+[AbstractJarVisitor,DEBUG] Filtering: dao.CharterDao
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: charters
+[DTDEntityResolver,DEBUG] trying to resolve system-id [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd]
+[EJB3DTDEntityResolver,DEBUG] recognized EJB3 ORM namespace; attempting to resolve on classpath under org/hibernate/ejb
+[EJB3DTDEntityResolver,DEBUG] located [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd] in classpath
+[Ejb3Configuration,DEBUG] Detect class: true; detect hbm: true
+[AbstractJarVisitor,DEBUG] Searching mapped entities in jar/par: file:/C:/Users/Maciel%20B/workspace-web/ProjetoTCC/bin
+[AbstractJarVisitor,DEBUG] Filtering: dao.CharterDao
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: persistence.xml
+[DTDEntityResolver,DEBUG] trying to resolve system-id [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd]
+[EJB3DTDEntityResolver,DEBUG] recognized EJB3 ORM namespace; attempting to resolve on classpath under org/hibernate/ejb
+[EJB3DTDEntityResolver,DEBUG] located [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd] in classpath
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: persistence.xml
+[DTDEntityResolver,DEBUG] trying to resolve system-id [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd]
+[EJB3DTDEntityResolver,DEBUG] recognized EJB3 ORM namespace; attempting to resolve on classpath under org/hibernate/ejb
+[EJB3DTDEntityResolver,DEBUG] located [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd] in classpath
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: persistence.xml
+[DTDEntityResolver,DEBUG] trying to resolve system-id [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd]
+[EJB3DTDEntityResolver,DEBUG] recognized EJB3 ORM namespace; attempting to resolve on classpath under org/hibernate/ejb
+[EJB3DTDEntityResolver,DEBUG] located [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd] in classpath
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: persistence.xml
+[DTDEntityResolver,DEBUG] trying to resolve system-id [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd]
+[EJB3DTDEntityResolver,DEBUG] recognized EJB3 ORM namespace; attempting to resolve on classpath under org/hibernate/ejb
+[EJB3DTDEntityResolver,DEBUG] located [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd] in classpath
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: persistence.xml
+[DTDEntityResolver,DEBUG] trying to resolve system-id [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd]
+[EJB3DTDEntityResolver,DEBUG] recognized EJB3 ORM namespace; attempting to resolve on classpath under org/hibernate/ejb
+[EJB3DTDEntityResolver,DEBUG] located [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd] in classpath
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: persistence.xml
+[DTDEntityResolver,DEBUG] trying to resolve system-id [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd]
+[EJB3DTDEntityResolver,DEBUG] recognized EJB3 ORM namespace; attempting to resolve on classpath under org/hibernate/ejb
+[EJB3DTDEntityResolver,DEBUG] located [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd] in classpath
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: persistence.xml
+[DTDEntityResolver,DEBUG] trying to resolve system-id [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd]
+[EJB3DTDEntityResolver,DEBUG] recognized EJB3 ORM namespace; attempting to resolve on classpath under org/hibernate/ejb
+[EJB3DTDEntityResolver,DEBUG] located [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd] in classpath
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: charters
+[DTDEntityResolver,DEBUG] trying to resolve system-id [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd]
+[EJB3DTDEntityResolver,DEBUG] recognized EJB3 ORM namespace; attempting to resolve on classpath under org/hibernate/ejb
+[EJB3DTDEntityResolver,DEBUG] located [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd] in classpath
+[Ejb3Configuration,DEBUG] Detect class: true; detect hbm: true
+[AbstractJarVisitor,DEBUG] Searching mapped entities in jar/par: file:/C:/Users/Maciel%20B/workspace-web/ProjetoTCC/bin
+[AbstractJarVisitor,DEBUG] Filtering: dao.CharterDao
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: charters
+[DTDEntityResolver,DEBUG] trying to resolve system-id [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd]
+[EJB3DTDEntityResolver,DEBUG] recognized EJB3 ORM namespace; attempting to resolve on classpath under org/hibernate/ejb
+[EJB3DTDEntityResolver,DEBUG] located [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd] in classpath
+[Ejb3Configuration,DEBUG] Detect class: true; detect hbm: true
+[AbstractJarVisitor,DEBUG] Searching mapped entities in jar/par: file:/C:/Users/Maciel%20B/workspace-web/ProjetoTCC/bin
+[AbstractJarVisitor,DEBUG] Filtering: dao.CharterDao
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: charters
+[DTDEntityResolver,DEBUG] trying to resolve system-id [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd]
+[EJB3DTDEntityResolver,DEBUG] recognized EJB3 ORM namespace; attempting to resolve on classpath under org/hibernate/ejb
+[EJB3DTDEntityResolver,DEBUG] located [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd] in classpath
+[Ejb3Configuration,DEBUG] Detect class: true; detect hbm: true
+[AbstractJarVisitor,DEBUG] Searching mapped entities in jar/par: file:/C:/Users/Maciel%20B/workspace-web/ProjetoTCC/bin
+[AbstractJarVisitor,DEBUG] Filtering: dao.CharterDao
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: charters
+[DTDEntityResolver,DEBUG] trying to resolve system-id [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd]
+[EJB3DTDEntityResolver,DEBUG] recognized EJB3 ORM namespace; attempting to resolve on classpath under org/hibernate/ejb
+[EJB3DTDEntityResolver,DEBUG] located [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd] in classpath
+[Ejb3Configuration,DEBUG] Detect class: true; detect hbm: true
+[AbstractJarVisitor,DEBUG] Searching mapped entities in jar/par: file:/C:/Users/Maciel%20B/workspace-web/ProjetoTCC/bin
+[AbstractJarVisitor,DEBUG] Filtering: dao.CharterDao
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: charters
+[DTDEntityResolver,DEBUG] trying to resolve system-id [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd]
+[EJB3DTDEntityResolver,DEBUG] recognized EJB3 ORM namespace; attempting to resolve on classpath under org/hibernate/ejb
+[EJB3DTDEntityResolver,DEBUG] located [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd] in classpath
+[Ejb3Configuration,DEBUG] Detect class: true; detect hbm: true
+[AbstractJarVisitor,DEBUG] Searching mapped entities in jar/par: file:/C:/Users/Maciel%20B/workspace-web/ProjetoTCC/bin
+[AbstractJarVisitor,DEBUG] Filtering: dao.CharterDao
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: charters
+[DTDEntityResolver,DEBUG] trying to resolve system-id [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd]
+[EJB3DTDEntityResolver,DEBUG] recognized EJB3 ORM namespace; attempting to resolve on classpath under org/hibernate/ejb
+[EJB3DTDEntityResolver,DEBUG] located [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd] in classpath
+[Ejb3Configuration,DEBUG] Detect class: true; detect hbm: true
+[AbstractJarVisitor,DEBUG] Searching mapped entities in jar/par: file:/C:/Users/Maciel%20B/workspace-web/ProjetoTCC/bin
+[AbstractJarVisitor,DEBUG] Filtering: dao.CharterDao
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: charter
+[DTDEntityResolver,DEBUG] trying to resolve system-id [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd]
+[EJB3DTDEntityResolver,DEBUG] recognized EJB3 ORM namespace; attempting to resolve on classpath under org/hibernate/ejb
+[EJB3DTDEntityResolver,DEBUG] located [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd] in classpath
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: charters
+[DTDEntityResolver,DEBUG] trying to resolve system-id [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd]
+[EJB3DTDEntityResolver,DEBUG] recognized EJB3 ORM namespace; attempting to resolve on classpath under org/hibernate/ejb
+[EJB3DTDEntityResolver,DEBUG] located [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd] in classpath
+[Ejb3Configuration,DEBUG] Detect class: true; detect hbm: true
+[AbstractJarVisitor,DEBUG] Searching mapped entities in jar/par: file:/C:/Users/Maciel%20B/workspace-web/ProjetoTCC/bin
+[AbstractJarVisitor,DEBUG] Filtering: dao.CharterDao
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: charters
+[DTDEntityResolver,DEBUG] trying to resolve system-id [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd]
+[EJB3DTDEntityResolver,DEBUG] recognized EJB3 ORM namespace; attempting to resolve on classpath under org/hibernate/ejb
+[EJB3DTDEntityResolver,DEBUG] located [http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd] in classpath
+[Ejb3Configuration,DEBUG] Detect class: true; detect hbm: true
+[AbstractJarVisitor,DEBUG] Searching mapped entities in jar/par: file:/C:/Users/Maciel%20B/workspace-web/ProjetoTCC/bin
+[AbstractJarVisitor,DEBUG] Filtering: dao.CharterDao
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: charters
+[Ejb3Configuration,INFO] Could not find any META-INF/persistence.xml file in the classpath
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: charters
+[Ejb3Configuration,INFO] Could not find any META-INF/persistence.xml file in the classpath
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: charters
+[Ejb3Configuration,INFO] Could not find any META-INF/persistence.xml file in the classpath
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: charters
+[Ejb3Configuration,INFO] Could not find any META-INF/persistence.xml file in the classpath
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: charters
+[Ejb3Configuration,INFO] Could not find any META-INF/persistence.xml file in the classpath
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: charters
+[Ejb3Configuration,INFO] Could not find any META-INF/persistence.xml file in the classpath
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: charters
+[Ejb3Configuration,INFO] Could not find any META-INF/persistence.xml file in the classpath
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: charters
+[Ejb3Configuration,INFO] Could not find any META-INF/persistence.xml file in the classpath
+[Version,INFO] Hibernate Annotations 3.4.0.GA
+[Environment,INFO] Hibernate 3.3.0.SP1
+[Environment,INFO] hibernate.properties not found
+[Environment,INFO] Bytecode provider name : javassist
+[Environment,INFO] using JDK 1.4 java.sql.Timestamp handling
+[Version,INFO] Hibernate Commons Annotations 3.1.0.GA
+[Version,INFO] Hibernate EntityManager 3.4.0.GA
+[Ejb3Configuration,DEBUG] Look up for persistence unit: charters
+[Ejb3Configuration,INFO] Could not find any META-INF/persistence.xml file in the classpath
