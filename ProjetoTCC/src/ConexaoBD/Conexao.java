@@ -10,53 +10,77 @@ import java.sql.SQLException;
 
 public class Conexao {
 	
+	private static final String dir = "D:/projetos/TCC/ProjetoCin/ProjetoTCC/db/DBEXPLORATORIO.FDB";
 	private static final String driver = "org.firebirdsql.jdbc.FBDriver";
-	private static final String url = "jdbc:firebirdsql:localhost:C:\\BaseTCC\\CHARTERS.fdb";
-	private static final String user = "SYSDBA";
-	private static final String password = "masterkey";
-	private Connection connection;
-	public ResultSet resultset;
-	
-	// o codigo de conxeao com o banco está correto.
-	public boolean conecta(){
+	private static final String databaseURL = "jdbc:firebirdsql:localhost:" + dir;
+	private static final String user = "root";
+	private static final String password = "turma15";
+
+	java.sql.Connection con = null;
+    java.sql.ResultSet rs = null;
+    
+    /**
+     * Conexão com a base de dados 
+     * @return boolean result
+     */
+	public boolean conectar(){
 		
 		boolean result = true;
 		
 		try {
 			Class.forName(driver);
-			connection = DriverManager.getConnection(url,user,password);
+			con = java.sql.DriverManager.getConnection(databaseURL, user, password);
 			System.out.println("conexao executada com sucesso");
-		} catch (ClassNotFoundException driver) {
-			System.out.println("Driver não localizado "+driver);
+		} catch (ClassNotFoundException e) {
+            // A call to Class.forName() forces us to consider this exception
+            System.out.println("Firebird JCA-JDBC driver not found in class path");
+            System.out.println(e.getMessage());
 			result = false;
-		}catch (SQLException fonte) {
-			System.out.println("Erro na conexão "+fonte);
+		} catch (SQLException f) {
+            f.printStackTrace();
+            System.out.println("Não é possível estabelecer uma conexão através do gerenciador de driver.");
+            showSQLException(f);
 			result = false;
 		}
 		return result;
 		
 	}
-	public void desconeta(){
-		boolean result = true;
-		
-		try {
-			connection.close();
-			System.out.println("banco fechado");
-		} catch (SQLException fecha) {
-			System.out.println("Não foi possível fechar a conexao"+fecha);
-			result = false;
-		}
-	}
-	public Connection getConnection() {
-		return connection;
-	}
-	public void setConnection(Connection connection) {
-		this.connection = connection;
+	
+	/**
+	 * Desconectar a base de dados.
+	 */
+	public void desconectar(){	
+        try {
+            if (con != null)
+                con.close();
+            System.out.println("Conexão com a base de dados encerrada.");
+        } catch (java.sql.SQLException e) {
+            showSQLException(e);
+        }
 	}
 	
-	public static void main(String args[]){
-		 Conexao conexao = new Conexao();
-		 conexao.conecta();
-		}
+	public java.sql.Connection getConnection() {
+		return con;
+	}
 	
+	public void setConnection(java.sql.Connection con) {
+		this.con = con;
+	}
+	
+    /**
+     * Display an SQLException which has occurred in this application.
+     * @param e SQLException
+     */
+    private static void showSQLException(java.sql.SQLException e) {
+        /* Notice that a SQLException is actually a chain of SQLExceptions,
+         * let's not forget to print all of them
+         */
+        java.sql.SQLException next = e;
+        while (next != null) {
+            System.out.println(next.getMessage());
+            System.out.println("Error Code: " + next.getErrorCode());
+            System.out.println("SQL State: " + next.getSQLState());
+            next = next.getNextException();
+        }
+    }		
 }

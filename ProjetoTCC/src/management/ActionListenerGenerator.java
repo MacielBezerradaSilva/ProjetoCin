@@ -27,9 +27,8 @@ public class ActionListenerGenerator {
 	public ActionListener generateNewSessionBySpreadSheetListener(){
 		ActionListener actionListener = new ActionListener() {
 			
-			@Override
+			//@Override
 			public void actionPerformed(ActionEvent e) {
-				entryPoint.res
 				
 			}
 		};
@@ -39,7 +38,7 @@ public class ActionListenerGenerator {
 	public ActionListener generateExitListener(){
 		ActionListener actionListener = new ActionListener() {
 			
-			@Override
+			//@Override
 			public void actionPerformed(ActionEvent e) {
 				System.exit(0);
 				
@@ -50,7 +49,7 @@ public class ActionListenerGenerator {
 	
 	public ListSelectionListener generateListSelectionListener(JList list, int index){
 		ListSelectionListener listSelectionListener = new ListSelectionListener() {	
-			@Override
+			//@Override
 			public void valueChanged(ListSelectionEvent e) {
 				
 				

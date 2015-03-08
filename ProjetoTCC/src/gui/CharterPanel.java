@@ -41,7 +41,6 @@ public class CharterPanel extends JPanel{
 		super(new GridLayout(CHARTER_ROWS,CHARTER_COLS,CHARTER_H_GAP,CHARTER_V_GAP));
 		this.charter = new Charter();
 		rm = new RequestManager(new JFrame());
-		crea
 	}
 	
 	public void setCharter(Charter newCharter){

@@ -1,0 +1,37 @@
+#Scripts DataBase
+
+CREATE DATABASE DBExploratorio;
+
+#Scripts Tables
+
+CREATE TABLE charters
+(
+	charter_id 	integer NOT NULL,
+	name 	varchar(50) NOT NULL,
+	objective 	varchar(50),
+	requirements	varchar(50),
+	setup		varchar(50),
+	notes 	varchar(100),
+	keyAreas	varchar(50),
+	issuesToBeAware		varchar(50),
+	importantNotes 	varchar(100),		
+    maxTime int,
+    minTime int,
+    creationDate timestamp NOT NULL,
+    
+	PRIMARY KEY(charter_id)
+);
+
+CREATE GENERATOR gen_charter_id;
+SET GENERATOR gen_charter_id TO 0;
+
+SET TERM !! ;
+
+CREATE TRIGGER charters_trg FOR charters
+ ACTIVE BEFORE INSERT POSITION 0
+AS 
+BEGIN 
+   IF (NEW.charter_id is NULL) THEN NEW.charter_id = GEN_ID(gen_charter_id, 1);
+END!!
+
+SET TERM ; !!

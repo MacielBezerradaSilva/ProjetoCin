@@ -21,10 +21,11 @@ public class CharterDao implements ICharterDao{
 		this.charters = new ArrayList<Charter>();
 	}
 
-	@Override
 	public void saveCharter(Charter charter) {
-		conexao.conecta();	
+		conexao.conectar();	
 		try {
+			//java.sql.Statement stmt = conexao.getConnection().createStatement();
+			
 			PreparedStatement pStatement = conexao.getConnection().prepareStatement("INSERT INTO CHARTERS (NAME,OBJECTIVE,SETUP,NOTES,KEYAREAS,ISSUESTOBEAWARE,IMPORTANTNOTES,REQUIREMENTS,MAXTIME,MINTIME) VALUES (?,?,?,?,?,?,?,?,?,?)");		
 			pStatement.setString(1,charter.getName());
 			pStatement.setString(2,charter.getObjective());
@@ -37,31 +38,28 @@ public class CharterDao implements ICharterDao{
 			pStatement.setInt(9,charter.getMaxTime());
 			pStatement.setInt(10,charter.getMinTime());
 			pStatement.executeUpdate();
-			conexao.desconeta();
+			conexao.desconectar();
 		} catch (SQLException e) {
 			System.out.println("Erro de inserção"+e.getMessage());
 		}
 
 	}
 
-
-	@Override
 	public void deleteCharter(Charter charter) {
-		conexao.conecta();
+		conexao.conectar();
 		try {
 			PreparedStatement pStatment = 
 					conexao.getConnection().prepareStatement("Delete from Charters where EtId = ? ");
 			pStatment.setInt(1, charter.getEtId());
 			pStatment.executeUpdate();
-			conexao.desconeta();
+			conexao.desconectar();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	@Override
 	public List<Charter> listCharter() {
-		conexao.conecta();
+		conexao.conectar();
 		try {
 			PreparedStatement pStatement = conexao.getConnection().prepareStatement("Select * from CHARTERS");
 			ResultSet rs = pStatement.executeQuery();
@@ -79,7 +77,7 @@ public class CharterDao implements ICharterDao{
 				charter.setMaxTime(rs.getInt("MAXTIME"));
 				charter.setMinTime(rs.getInt("MINTIME"));
 				charters.add(charter);
-				conexao.desconeta();
+				conexao.desconectar();
 			}
 			rs.close();
 			pStatement.close();
@@ -90,10 +88,8 @@ public class CharterDao implements ICharterDao{
 		return charters;
 	}
 
-
-	@Override
 	public void updateCharter(Charter chater) {
-		conexao.conecta();
+		conexao.conectar();
 		try {
 			PreparedStatement pStatement = 
 					conexao.getConnection().prepareStatement("UPDATE CHARTERS SET name = ?, objective = ?, setup = ?, notes = ?, keyareas = ?, issuestobeaware = ?, importantnotes = ?, requirements = ?, maxtime = ?, mintime = ? where EtId = ?");	
@@ -109,7 +105,7 @@ public class CharterDao implements ICharterDao{
 			pStatement.setInt(10,chater.getMinTime());
 			pStatement.setInt(11,chater.getEtId());
 			pStatement.executeUpdate();
-			conexao.desconeta();
+			conexao.desconectar();
 		} catch (Exception e) {
 			System.out.println("Erro de atualização "+e.getMessage());
 		}
@@ -118,11 +114,10 @@ public class CharterDao implements ICharterDao{
 	public Charter getCharter() {
 		return charter;
 	}
+	
 	public void setCharter(Charter charter) {
 		this.charter = charter;
 	}
-
-
 
 	public static void main(String[]args){		
 

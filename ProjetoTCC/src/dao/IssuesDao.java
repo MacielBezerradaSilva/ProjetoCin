@@ -29,39 +29,36 @@ public class IssuesDao implements IIssues{
 		this.issues = new ArrayList<Issue>();
 	}
 
-	@Override
 	public void saveIssue(Issue issue) {
-		conexao.conecta();	
+		conexao.conectar();	
 		try {
 			PreparedStatement pStatement = conexao.getConnection().prepareStatement("INSERT INTO ISSUES (NAME,DESCRIPTION,TIPE) VALUES (?,?,?)");		
 			pStatement.setString(1,issue.getName());
 			pStatement.setString(2,issue.getDescription());
 			pStatement.setString(3,issue.getTipe()	);
 			pStatement.executeUpdate();
-			conexao.desconeta();
+			conexao.desconectar();
 		} catch (SQLException e) {
 			System.out.println("Erro de inserção"+e.getMessage());
 		}
 
 	}
 
-	@Override
 	public void deleteIssue(Issue issue) {
-		conexao.conecta();
+		conexao.conectar();
 		try {
 			PreparedStatement pStatment = 
 					conexao.getConnection().prepareStatement("Delete from ISSUES where Id = ? ");
 			pStatment.setInt(1, issue.getId());
 			pStatment.executeUpdate();
-			conexao.desconeta();
+			conexao.desconectar();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	@Override
 	public List<Issue> listIssue() {
-		conexao.conecta();
+		conexao.conectar();
 		try {
 			PreparedStatement pStatement = conexao.getConnection().prepareStatement("Select * from ISSUES");
 			ResultSet rs = pStatement.executeQuery();
@@ -71,7 +68,7 @@ public class IssuesDao implements IIssues{
 				issue.setName(rs.getString("NAME"));
 				issue.setDescription(rs.getString("DESCRIPTION"));
 				issues.add(issue);
-				conexao.desconeta();
+				conexao.desconectar();
 			}
 			rs.close();
 			pStatement.close();
@@ -82,7 +79,6 @@ public class IssuesDao implements IIssues{
 		return issues;
 	}
 
-	@Override
 	public void updateIssue(Issue issue) {
 		try {
 			PreparedStatement pStatement = 
@@ -91,7 +87,7 @@ public class IssuesDao implements IIssues{
 			pStatement.setString(2,issue.getDescription());
 			pStatement.setString(3,issue.getTipe());
 			pStatement.executeUpdate();
-			conexao.desconeta();
+			conexao.desconectar();
 		} catch (Exception e) {
 			System.out.println("Erro de atualização "+e.getMessage());
 		}

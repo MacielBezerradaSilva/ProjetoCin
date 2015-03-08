@@ -4,6 +4,7 @@
 package gui;
 
 import java.awt.BorderLayout;
+import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.GridLayout;
@@ -79,7 +80,7 @@ public class EntryPoint extends JFrame{
 	private JPanel currentPanel;
 
 
-	public EntryPoint() throws TransformerException {
+	public EntryPoint() {
 		oct = new ObjectCleanerThread();
 		oct.start();
 
@@ -140,7 +141,7 @@ public class EntryPoint extends JFrame{
 		this.setSize(new Dimension(800, 600));
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.addWindowStateListener(new WindowStateListener() {
-			@Override
+			//@Override
 			public void windowStateChanged(WindowEvent e) {
 				EntryPoint.this.update(EntryPoint.this.getGraphics());
 			}
@@ -159,7 +160,7 @@ public class EntryPoint extends JFrame{
 		this.setVisible(true);
 		this.setEnabled(true);
 	}
-	public void restartApplication(int choice) throws TransformerException {
+	public void restartApplication(int choice) {
 
 		if (choice == languageSelection) {
 			return;
@@ -186,7 +187,7 @@ public class EntryPoint extends JFrame{
 		}
 
 	}
-	public void rebuildInterface() throws TransformerException {
+	public void rebuildInterface() {
 		this.setEnabled(false);
 		this.setVisible(false);
 		this.dispose();
@@ -255,8 +256,8 @@ public class EntryPoint extends JFrame{
 
 		openSession.addActionListener(actionListenerGenerator.generateNewSessionBySpreadSheetListener());
 		exit.addActionListener(actionListenerGenerator.generateExitListener());
-		newSession.addActionListener(actionListenerGenerator.generateNewSessionListener(this));
-		newCharter.addActionListener(actionListenerGenerator.generateNewCharterListener(this));
+		//newSession.addActionListener(actionListenerGenerator.generateNewSessionListener(this));
+		//newCharter.addActionListener(actionListenerGenerator.generateNewCharterListener(this));
 
 		options.add(newSession);
 		options.add(openSession);
@@ -323,7 +324,7 @@ public class EntryPoint extends JFrame{
 		tcList = new JList(tcs);
 
 		tcList.addListSelectionListener(new ListSelectionListener() {
-			@Override
+			//@Override
 			public void valueChanged(ListSelectionEvent e) {
 				listIndex = tcList.getSelectedIndex();
 				updateListInformation();
@@ -438,14 +439,14 @@ public class EntryPoint extends JFrame{
 		}
 
 		portuguese.addActionListener(new ActionListener() {
-			@Override
+			//@Override
 			public void actionPerformed(ActionEvent e) {
 				restartApplication(0);
 			}
 		});
 
 		english.addActionListener(new ActionListener() {
-			@Override
+			//@Override
 			public void actionPerformed(ActionEvent e) {
 				restartApplication(1);
 			}
@@ -458,25 +459,21 @@ public class EntryPoint extends JFrame{
 	}
 
 	public void restoreSession() {
-		try {
-			FileNameExtensionFilter filter = new FileNameExtensionFilter(
-					requestManager.loadProperty(language + "_New_Session_Files"),
-					"xml");
+		FileNameExtensionFilter filter = new FileNameExtensionFilter(
+				requestManager.loadProperty(language + "_New_Session_Files"),
+				"xml");
 
-			JFileChooser fileChooser = new JFileChooser();
-			fileChooser.setFileFilter(filter);
+		JFileChooser fileChooser = new JFileChooser();
+		fileChooser.setFileFilter(filter);
 
-			int result = fileChooser.showOpenDialog(this);
+		int result = fileChooser.showOpenDialog(this);
 
-			if (result == JFileChooser.APPROVE_OPTION) {
+		if (result == JFileChooser.APPROVE_OPTION) {
 
-				String filename = fileChooser.getSelectedFile().getName();
-				Session loadSession = SessionController.getInstance().loadSession(filename);
-				//                System.out.println(loadSession.toString());
-				switchToPanel(new SessionPanelForm(loadSession, true));
-			}
-		} catch (IOException ex) {
-			JOptionPane.showMessageDialog(null, "Ocorreu um erro ao restaurar a sessão.");
+			String filename = fileChooser.getSelectedFile().getName();
+			//Session loadSession = SessionController.getInstance().loadSession(filename);
+			//                System.out.println(loadSession.toString());
+			//switchToPanel(new SessionPanelForm(loadSession, true));
 		}
 	}
 

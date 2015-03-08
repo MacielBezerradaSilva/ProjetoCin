@@ -21,7 +21,6 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
-import org.hibernate.TransactionException;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -44,7 +43,7 @@ public class XMLFileManagerFactory {
 		return xmlFileManagerFactory;
 	}
 
-	public void createLanguageFile(String language,boolean redefinition) throws TransformerException{
+	public void createLanguageFile(String language,boolean redefinition) {
 		try {
 			DocumentBuilderFactory documentFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder documentBuilder = documentFactory.newDocumentBuilder();
@@ -79,7 +78,7 @@ public class XMLFileManagerFactory {
 			Logger.getLogger(EntryPoint.class.getName()).log(Level.SEVERE, null, e);
 		}catch (TransformerConfigurationException e) {
 			Logger.getLogger(EntryPoint.class.getName()).log(Level.SEVERE,null, e);
-		}catch (TransactionException e) {
+		}catch (TransformerException e) {
 			Logger.getLogger(EntryPoint.class.getName()).log(Level.SEVERE,null, e);
 		}
 	}

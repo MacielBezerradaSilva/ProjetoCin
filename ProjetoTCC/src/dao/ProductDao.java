@@ -29,37 +29,35 @@ public class ProductDao implements IProduct{
 		this.products = new ArrayList<Product>();
 	}
 
-	@Override
 	public void saveProduct(Product product) {
-		conexao.conecta();	
+		conexao.conectar();	
 		try {
 			PreparedStatement pStatement = conexao.getConnection().prepareStatement("INSERT INTO PRODUCTS (NAME,PROJECT,LABEL) VALUES (?,?,?)");		
 			pStatement.setString(1,product.getName());
 			pStatement.setString(2,product.getProject());
 			pStatement.setArray(3, (Array) product.getLabels());
 			pStatement.executeUpdate();
-			conexao.desconeta();
+			conexao.desconectar();
 		} catch (SQLException e) {
 			System.out.println("Erro de inserção"+e.getMessage());
 		}
 	}
-
-	@Override
+	
 	public void deleteProduct(Product product) {
-		conexao.conecta();
+		conexao.conectar();
 		try {
 			PreparedStatement pStatment = 
 					conexao.getConnection().prepareStatement("Delete from PRODUCTS where Id = ? ");
 			pStatment.setInt(1, product.getId());
 			pStatment.executeUpdate();
-			conexao.desconeta();
+			conexao.desconectar();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}		
 	}
-	@Override
+	
 	public List<Product> listCharter() {
-		conexao.conecta();
+		conexao.conectar();
 		try {
 			PreparedStatement pStatement = conexao.getConnection().prepareStatement("Select * from PRODUCTS");
 			ResultSet rs = pStatement.executeQuery();
@@ -69,7 +67,7 @@ public class ProductDao implements IProduct{
 				product.setName(rs.getString("NAME"));
 				product.setProject(rs.getString("PROJECT"));
 				products.add(product);
-				conexao.desconeta();
+				conexao.desconectar();
 			}
 			rs.close();
 			pStatement.close();
@@ -80,9 +78,8 @@ public class ProductDao implements IProduct{
 		return products;
 	}	
 
-	@Override
 	public void updateProduct(Product product) {
-		conexao.conecta();
+		conexao.conectar();
 		try {
 			PreparedStatement pStatement = conexao.getConnection().prepareStatement("UPDATE PRODUCTS SET NAME = ?, PROJECT, LABEL where id = ?");
 			pStatement.setString(1, product.getName());
@@ -92,6 +89,7 @@ public class ProductDao implements IProduct{
 			// TODO: handle exception
 		}
 	}
+	
 	public static void main(String args[]){
 		Product product = new Product();
 		product.setName("lllllll");
