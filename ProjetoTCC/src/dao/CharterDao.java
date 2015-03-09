@@ -80,7 +80,7 @@ public class CharterDao implements ICharterDao{
 	public void updateCharter(Charter chater) throws SQLException{
 		conexao.conectar();
 		PreparedStatement pStatement = 
-				conexao.getConnection().prepareStatement("UPDATE CHARTERS SET name = ?, objective = ?, setup = ?, notes = ?, keyareas = ?, issuestobeaware = ?, importantnotes = ?, requirements = ?, maxtime = ?, mintime = ? where EtId = ?");	
+				conexao.getConnection().prepareStatement("UPDATE CHARTERS SET name = ?, objective = ?, setup = ?, notes = ?, keyareas = ?, issuestobeaware = ?, importantnotes = ?, requirements = ?, maxtime = ?, mintime = ? where charter_id = ?");	
 		pStatement.setString(1,chater.getName());
 		pStatement.setString(2,chater.getObjective());
 		pStatement.setString(3,chater.getSetup());

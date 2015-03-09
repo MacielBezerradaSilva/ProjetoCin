@@ -3,6 +3,7 @@
  */
 package dao;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import model.Product;
@@ -13,9 +14,9 @@ import model.Product;
  */
 public interface IProduct {
 	
-	public void saveProduct(Product product);
-	public void deleteProduct(Product product); 
-	public List<Product> listCharter();
-	public void updateProduct(Product product);
+	public void saveProduct(Product product) throws SQLException;
+	public void deleteProduct(Product product) throws SQLException; 
+	public List<Product> listCharter() throws SQLException;
+	public void updateProduct(Product product) throws SQLException;
 
 }

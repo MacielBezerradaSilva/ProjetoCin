@@ -22,12 +22,26 @@ CREATE TABLE charters
 	PRIMARY KEY(charter_id)
 );
 
+CREATE TABLE issues
+(
+	issue_id 	integer NOT NULL,
+	name 	varchar(50) NOT NULL,
+	description 	varchar(50),
+	tipo	varchar(50),
+    creationDate timestamp NOT NULL,
+    
+	PRIMARY KEY(issue_id)
+);
+
 CREATE GENERATOR gen_charter_id;
 SET GENERATOR gen_charter_id TO 0;
 
+CREATE GENERATOR gen_issue_id;
+SET GENERATOR gen_issue_id TO 0;
+
 SET TERM !! ;
 
-CREATE TRIGGER charters_trg FOR charters
+CREATE TRIGGER trg_charter_id FOR charters
  ACTIVE BEFORE INSERT POSITION 0
 AS 
 BEGIN 
@@ -37,7 +51,29 @@ END!!
 SET TERM ; !!
 
 SET TERM ^ ;
+
 CREATE TRIGGER TRG_CHARTER_CREATIONDATE FOR CHARTERS ACTIVE
+BEFORE INSERT POSITION 0
+AS 
+BEGIN 
+   NEW.CREATIONDATE = current_timestamp;
+END^
+SET TERM ; ^
+
+SET TERM !! ;
+
+CREATE TRIGGER trg_issue_id FOR issues
+ ACTIVE BEFORE INSERT POSITION 0
+AS 
+BEGIN 
+   IF (NEW.issue_id is NULL) THEN NEW.issue_id = GEN_ID(gen_issue_id, 1);
+END!!
+
+SET TERM ; !!
+
+SET TERM ^ ;
+
+CREATE TRIGGER TRG_ISSUE_CREATIONDATE FOR ISSUES ACTIVE
 BEFORE INSERT POSITION 0
 AS 
 BEGIN 

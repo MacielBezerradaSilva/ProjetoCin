@@ -24,7 +24,7 @@ public class Product {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
+	private int product_id;
 	@Column(name="name")
 	private String name;
 	@Column(name = "project")
@@ -36,11 +36,11 @@ public class Product {
 	private List<String> labels;
 
 	public int getId() {
-		return id;
+		return product_id;
 	}
 
 	public void setId(int id) {
-		this.id = id;
+		this.product_id = id;
 	}
 
 	public String getName() {
@@ -72,7 +72,7 @@ public class Product {
 		int size = labels.size();
 		//o vector auxiliar terá tamanho da lista
 		String[] result = new String[size];
-		//varando a lista de labels e adicionando no vector aux.
+		//varendo a lista de labels e adicionando no vector aux.
 		for(int i=0;i<size;i++){
 			result[i]= labels.get(i);
 		}
