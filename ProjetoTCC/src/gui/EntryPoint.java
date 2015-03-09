@@ -110,9 +110,11 @@ public class EntryPoint extends JFrame{
 
 		oct.addObject(this);
 	}
+	
 	public void initialize() {
 		createFrame();
 	}
+	
 	public String chooseLanguage() {
 
 		String[] options = {"Português (PT-BR)", "English (EN-US)"};
@@ -135,13 +137,13 @@ public class EntryPoint extends JFrame{
 
 		return r;
 	}
+	
 	public void createFrame() {
 
 		this.setTitle(requestManager.loadProperty(language + "_Application_Title"));
 		this.setSize(new Dimension(800, 600));
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		this.addWindowStateListener(new WindowStateListener() {
-			//@Override
+		this.addWindowStateListener(new WindowStateListener() {			
 			public void windowStateChanged(WindowEvent e) {
 				EntryPoint.this.update(EntryPoint.this.getGraphics());
 			}
@@ -160,6 +162,7 @@ public class EntryPoint extends JFrame{
 		this.setVisible(true);
 		this.setEnabled(true);
 	}
+	
 	public void restartApplication(int choice) {
 
 		if (choice == languageSelection) {
@@ -187,6 +190,7 @@ public class EntryPoint extends JFrame{
 		}
 
 	}
+	
 	public void rebuildInterface() {
 		this.setEnabled(false);
 		this.setVisible(false);
@@ -198,6 +202,7 @@ public class EntryPoint extends JFrame{
 	public void exitApplication() {
 		System.exit(0);
 	}
+	
 	public JPanel createMainPanel() {
 		panel = new JPanel(new BorderLayout());
 		panel.add(createMenuBar(), BorderLayout.NORTH);
@@ -257,7 +262,7 @@ public class EntryPoint extends JFrame{
 		openSession.addActionListener(actionListenerGenerator.generateNewSessionBySpreadSheetListener());
 		exit.addActionListener(actionListenerGenerator.generateExitListener());
 		//newSession.addActionListener(actionListenerGenerator.generateNewSessionListener(this));
-		//newCharter.addActionListener(actionListenerGenerator.generateNewCharterListener(this));
+		newCharter.addActionListener(actionListenerGenerator.generateNewCharterListener(this));
 
 		options.add(newSession);
 		options.add(openSession);

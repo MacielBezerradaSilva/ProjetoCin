@@ -6,6 +6,8 @@ package execution;
 
 import javax.swing.JTextField;
 
+import factory.XMLFileManagerFactory;
+
 /**
  *
  * @author heitor
@@ -18,7 +20,6 @@ public class Util {
     public static void removeInvalidChars(JTextField tf) {
         boolean stop = false;
         String str = tf.getText();
-        //System.out.println(str);
         do {
             try {
                 Integer.parseInt(str);
@@ -34,4 +35,13 @@ public class Util {
         } while (!stop);
         tf.setText(str);
     }
+    
+    public static String getLanguage() {
+    	String language;
+		XMLFileManagerFactory xMLFileManagerFactory = XMLFileManagerFactory.getInstance();
+		language = xMLFileManagerFactory.readLanguage();
+    	
+        return language;
+    }
+
 }

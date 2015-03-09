@@ -8,15 +8,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
 @Entity
-@Table(name="charter")
+@Table(name="charters")
 public class Charter { 
 	@Id
-	//gera chaves(id)automaticas para etid
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="etid")
-    private int etId;
+	@Column(name="charter_id")
+    private int charterId;
 	@Column(name="name")
 	private String name;
 	@Column(name="objective")
@@ -37,10 +35,11 @@ public class Charter {
     private int maxTime;
 	@Column(name="minTime")
 	private int minTime;
-    //private Date creationDate;
+	@Column(name="creationdate")
+    private java.sql.Timestamp creationDate;
 
     public Charter(){
-    	this.etId = 0;
+    	this.charterId = 0;
     	this.name = "";
     	this.objective = "";
     	this.setup = "";
@@ -51,6 +50,7 @@ public class Charter {
     	this.requirements = "";
         this.maxTime = 0;
         this.minTime = 0;
+        this.creationDate = null;
     }
     
     public String getName() {
@@ -61,12 +61,12 @@ public class Charter {
         this.name = name;
     }
 
-    public int getEtId() {
-        return etId;
+    public int getId() {
+        return charterId;
     }
 
-    public void setEtId(int etId) {
-        this.etId = etId;
+    public void setId(int Id) {
+        this.charterId = Id;
     }
 
     public String getObjective() {
@@ -139,5 +139,15 @@ public class Charter {
 
     public void setMinTime(int minTime) {
         this.minTime = minTime;
+    }
+    
+    public java.sql.Timestamp getCreationDate()
+    {
+    	return creationDate;
+    }
+    
+    public void setCreationDate(java.sql.Timestamp dt)
+    {
+    	this.creationDate = dt;
     }
 }
