@@ -16,13 +16,13 @@ import ConexaoBD.Conexao;
  * @author Maciel B
  *
  */
-public class SessionDaoXML implements ISessionDAO{
+public class SessionDao implements ISessionDAO{
 
 	private Conexao conexao;
 	private Session session;
 	List<Session> sessions;
 
-	public SessionDaoXML(){
+	public SessionDao(){
 		this.conexao = new Conexao();
 		this.session = new Session();
 		this.sessions = new ArrayList<Session>();

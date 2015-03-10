@@ -3,6 +3,7 @@
  */
 package controller;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import model.Charter;
@@ -21,19 +22,19 @@ public class CharterControllerImpl implements ICharterController{
 		this.dao = new CharterDao(); 
 	}
 	
-	public void createCharter(Charter charter) {
+	public void createCharter(Charter charter) throws SQLException {
 		dao.saveCharter(charter);	
 	}
 
-	public void updateCharter(Charter charter) {
+	public void updateCharter(Charter charter) throws SQLException{
 		dao.updateCharter(charter);
 	}
 
-	public List<Charter> listarCharter() {
+	public List<Charter> listarCharter() throws SQLException{
 		return dao.listCharter();
 	}
 
-	public void deleteCharter(Charter charter) {
+	public void deleteCharter(Charter charter) throws SQLException{
 		dao.deleteCharter(charter);
 	}
 

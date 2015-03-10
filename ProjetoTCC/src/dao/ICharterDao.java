@@ -3,6 +3,7 @@
  */
 package dao;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import model.Charter;
@@ -13,8 +14,8 @@ import model.Charter;
  */
 public interface ICharterDao {
 	
-	public void saveCharter(Charter charter);
-	public void deleteCharter(Charter charter); 
-	public List<Charter> listCharter();
-	public void updateCharter(Charter chater);
+	public void saveCharter(Charter charter) throws SQLException;
+	public void deleteCharter(Charter charter) throws SQLException; 
+	public List<Charter> listCharter() throws SQLException;
+	public void updateCharter(Charter chater) throws SQLException;
 }

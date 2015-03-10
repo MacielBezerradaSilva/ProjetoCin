@@ -15,25 +15,24 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name = "issue")
+@Table(name = "issues")
 public class Issue {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name = "ID")
+	@Column(name = "ISSUE_ID")
 	private int id;
 	@Column(name = "name")
 	private String name;
 	@Column(name = "description")
 	private String description;
-	//tive que por tipe devido ao BD
-	@Column(name="tipe")
-	private String tipe;
+	@Column(name="tipo")
+	private String tipo;
 	
 	public Issue(){
 		this.name = "";
 		this.description = "";
-		this.tipe = "";
+		this.tipo = "";
 	}
 
 	public String getName() {
@@ -59,12 +58,12 @@ public class Issue {
 		this.id = id;
 	}
 
-	public String getTipe() {
-		return tipe;
+	public String getTipo() {
+		return tipo;
 	}
 
-	public void setTipe(String tipe) {
-		this.tipe = tipe;
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
 	}
 	
 }

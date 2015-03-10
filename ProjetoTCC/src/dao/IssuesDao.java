@@ -29,67 +29,50 @@ public class IssuesDao implements IIssues{
 		this.issues = new ArrayList<Issue>();
 	}
 
-	public void saveIssue(Issue issue) {
+	public void saveIssue(Issue issue) throws SQLException{
 		conexao.conectar();	
-		try {
-			PreparedStatement pStatement = conexao.getConnection().prepareStatement("INSERT INTO ISSUES (NAME,DESCRIPTION,TIPE) VALUES (?,?,?)");		
-			pStatement.setString(1,issue.getName());
-			pStatement.setString(2,issue.getDescription());
-			pStatement.setString(3,issue.getTipe()	);
-			pStatement.executeUpdate();
-			conexao.desconectar();
-		} catch (SQLException e) {
-			System.out.println("Erro de inserção"+e.getMessage());
-		}
-
+		PreparedStatement pStatement = conexao.getConnection().prepareStatement("INSERT INTO ISSUES (NAME,DESCRIPTION,TIPE) VALUES (?,?,?)");		
+		pStatement.setString(1,issue.getName());
+		pStatement.setString(2,issue.getDescription());
+		pStatement.setString(3,issue.getTipo()	);
+		pStatement.executeUpdate();
+		conexao.desconectar();
 	}
 
-	public void deleteIssue(Issue issue) {
+	public void deleteIssue(Issue issue) throws SQLException{
 		conexao.conectar();
-		try {
-			PreparedStatement pStatment = 
-					conexao.getConnection().prepareStatement("Delete from ISSUES where Id = ? ");
-			pStatment.setInt(1, issue.getId());
-			pStatment.executeUpdate();
-			conexao.desconectar();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		PreparedStatement pStatment = 
+				conexao.getConnection().prepareStatement("Delete from ISSUES where issue_id = ? ");
+		pStatment.setInt(1, issue.getId());
+		pStatment.executeUpdate();
+		conexao.desconectar();
 	}
 
-	public List<Issue> listIssue() {
+	//falta colocar o campo creation date
+	public List<Issue> listIssue() throws SQLException{
 		conexao.conectar();
-		try {
-			PreparedStatement pStatement = conexao.getConnection().prepareStatement("Select * from ISSUES");
-			ResultSet rs = pStatement.executeQuery();
-			while(rs.next()){
-				Issue issue = new Issue();
-				issue.setId(rs.getInt("ID"));
-				issue.setName(rs.getString("NAME"));
-				issue.setDescription(rs.getString("DESCRIPTION"));
-				issues.add(issue);
-				conexao.desconectar();
-			}
-			rs.close();
-			pStatement.close();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} 		
+		PreparedStatement pStatement = conexao.getConnection().prepareStatement("Select * from ISSUES");
+		ResultSet rs = pStatement.executeQuery();
+		while(rs.next()){
+			Issue issue = new Issue();
+			issue.setId(rs.getInt("ISSUE_ID"));
+			issue.setName(rs.getString("NAME"));
+			issue.setDescription(rs.getString("DESCRIPTION"));
+			issues.add(issue);
+			conexao.desconectar();
+		}
+		rs.close();
+		pStatement.close();
 		return issues;
 	}
 
-	public void updateIssue(Issue issue) {
-		try {
-			PreparedStatement pStatement = 
-					conexao.getConnection().prepareStatement("UPDATE ISSUES SET name = ?, description = ?, tipe = ? where id = ?");	
-			pStatement.setString(1,issue.getName());
-			pStatement.setString(2,issue.getDescription());
-			pStatement.setString(3,issue.getTipe());
-			pStatement.executeUpdate();
-			conexao.desconectar();
-		} catch (Exception e) {
-			System.out.println("Erro de atualização "+e.getMessage());
-		}
+	public void updateIssue(Issue issue) throws SQLException{
+		PreparedStatement pStatement = 
+				conexao.getConnection().prepareStatement("UPDATE ISSUES SET name = ?, description = ?, tipe = ? where issue_id = ?");	
+		pStatement.setString(1,issue.getName());
+		pStatement.setString(2,issue.getDescription());
+		pStatement.setString(3,issue.getTipo());
+		pStatement.executeUpdate();
+		conexao.desconectar();
 	}
 }

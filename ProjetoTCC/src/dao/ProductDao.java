@@ -29,79 +29,48 @@ public class ProductDao implements IProduct{
 		this.products = new ArrayList<Product>();
 	}
 
-	public void saveProduct(Product product) {
+	public void saveProduct(Product product) throws SQLException{
 		conexao.conectar();	
-		try {
-			PreparedStatement pStatement = conexao.getConnection().prepareStatement("INSERT INTO PRODUCTS (NAME,PROJECT,LABEL) VALUES (?,?,?)");		
-			pStatement.setString(1,product.getName());
-			pStatement.setString(2,product.getProject());
-			pStatement.setArray(3, (Array) product.getLabels());
-			pStatement.executeUpdate();
+		PreparedStatement pStatement = conexao.getConnection().prepareStatement("INSERT INTO PRODUCTS (NAME,PROJECT,LABEL) VALUES (?,?,?)");		
+		pStatement.setString(1,product.getName());
+		pStatement.setString(2,product.getProject());
+		pStatement.setArray(3, (Array) product.getLabels());
+		pStatement.executeUpdate();
+		conexao.desconectar();
+	}
+	
+	public void deleteProduct(Product product) throws SQLException{
+		conexao.conectar();
+		PreparedStatement pStatment = 
+				conexao.getConnection().prepareStatement("Delete from PRODUCTS where product_id = ? ");
+		pStatment.setInt(1, product.getId());
+		pStatment.executeUpdate();
+		conexao.desconectar();
+	}
+	
+	public List<Product> listCharter() throws SQLException{
+		conexao.conectar();
+		PreparedStatement pStatement = conexao.getConnection().prepareStatement("Select * from PRODUCTS");
+		ResultSet rs = pStatement.executeQuery();
+		while(rs.next()){
+			Product product = new Product();
+			product.setId(rs.getInt("PRODUCT_ID"));
+			product.setName(rs.getString("NAME"));
+			product.setProject(rs.getString("PROJECT"));
+			products.add(product);
 			conexao.desconectar();
-		} catch (SQLException e) {
-			System.out.println("Erro de inserção"+e.getMessage());
 		}
-	}
-	
-	public void deleteProduct(Product product) {
-		conexao.conectar();
-		try {
-			PreparedStatement pStatment = 
-					conexao.getConnection().prepareStatement("Delete from PRODUCTS where Id = ? ");
-			pStatment.setInt(1, product.getId());
-			pStatment.executeUpdate();
-			conexao.desconectar();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}		
-	}
-	
-	public List<Product> listCharter() {
-		conexao.conectar();
-		try {
-			PreparedStatement pStatement = conexao.getConnection().prepareStatement("Select * from PRODUCTS");
-			ResultSet rs = pStatement.executeQuery();
-			while(rs.next()){
-				Product product = new Product();
-				product.setId(rs.getInt("ID"));
-				product.setName(rs.getString("NAME"));
-				product.setProject(rs.getString("PROJECT"));
-				products.add(product);
-				conexao.desconectar();
-			}
-			rs.close();
-			pStatement.close();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} 		
+		rs.close();
+		pStatement.close();
 		return products;
 	}	
 
-	public void updateProduct(Product product) {
+	public void updateProduct(Product product) throws SQLException{
 		conexao.conectar();
-		try {
-			PreparedStatement pStatement = conexao.getConnection().prepareStatement("UPDATE PRODUCTS SET NAME = ?, PROJECT, LABEL where id = ?");
-			pStatement.setString(1, product.getName());
-			pStatement.setString(2, product.getProject());
-			pStatement.setArray(3, (Array) product.getLabels());;
-		} catch (Exception e) {
-			// TODO: handle exception
-		}
+		PreparedStatement pStatement = conexao.getConnection().prepareStatement("UPDATE PRODUCTS SET NAME = ?, PROJECT, LABEL where product_id = ?");
+		pStatement.setString(1, product.getName());
+		pStatement.setString(2, product.getProject());
+		pStatement.setArray(3, (Array) product.getLabels());;
 	}
 	
-	public static void main(String args[]){
-		Product product = new Product();
-		product.setName("lllllll");
-		product.setProject("ppppp");
-
-		String test = "maciel";
-		List<String> labels_aux = new ArrayList<String>();
-		labels_aux.add(test);
-
-		product.setLabels(labels_aux);
-		ProductDao dao = new ProductDao();
-		dao.saveProduct(product);
-	}
-
 }

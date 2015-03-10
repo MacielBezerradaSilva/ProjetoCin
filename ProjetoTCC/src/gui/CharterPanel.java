@@ -37,6 +37,7 @@ public class CharterPanel extends JPanel{
 	public CharterPanel(){
 		this(new Charter());
 	}
+	
 	public CharterPanel(Charter newCharter){
 		super(new GridLayout(CHARTER_ROWS,CHARTER_COLS,CHARTER_H_GAP,CHARTER_V_GAP));
 		this.charter = new Charter();
@@ -48,12 +49,12 @@ public class CharterPanel extends JPanel{
 		
 		String tmp;
 		if(charter.getName().length()>30){
-			tmp = charter.getName().substring(0,30)+"...";
+			tmp = charter.getName().substring(0,30) + "...";
 		}else{
 			tmp = charter.getName();
 		}
 		
-		charterNameId.setText(charter.getEtId()+" - "+tmp);
+		charterNameId.setText(charter.getId() + " - " + tmp);
 		charterObj.setText(charter.getObjective());
 		charterRequirements.setText(charter.getRequirements());
 		charterSetup.setText(charter.getSetup());
@@ -61,12 +62,12 @@ public class CharterPanel extends JPanel{
 		charterKeyAreas.setText(charter.getKeyAreas());
 		charterIssues.setText(charter.getIssuesToBeAware());
 		charterImpNotes.setText(charter.getImportantNotes());
-		charterMax.setText(charter.getMaxTime()+"");
-		charterMin.setText(charter.getMinTime()+"");
+		charterMax.setText(charter.getMaxTime() + "");
+		charterMin.setText(charter.getMinTime() + "");
 	}
 	private void createCharterPanel(){
 		
-		charterNameId = new JLabel(charter.getEtId()+" - "+charter.getName());
+		charterNameId = new JLabel(charter.getId() + " - " + charter.getName());
 		charterObj = new JLabel(charter.getObjective());
 		charterRequirements = new JLabel(charter.getRequirements());
 		charterSetup = new JLabel(charter.getSetup());
@@ -74,8 +75,8 @@ public class CharterPanel extends JPanel{
 		charterKeyAreas = new JLabel(charter.getKeyAreas());
 		charterIssues = new JLabel(charter.getIssuesToBeAware());
 		charterImpNotes = new JLabel(charter.getImportantNotes());
-		charterMax = new JLabel(charter.getMaxTime()+"");
-		charterMin = new JLabel(charter.getMinTime()+"");
+		charterMax = new JLabel(charter.getMaxTime() + "");
+		charterMin = new JLabel(charter.getMinTime() + "");
 	}
 
 }

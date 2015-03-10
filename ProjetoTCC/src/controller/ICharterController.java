@@ -3,6 +3,7 @@
  */
 package controller;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import model.Charter;
@@ -13,9 +14,9 @@ import model.Charter;
  */
 public interface ICharterController {
 	
-	public void createCharter(Charter charter);
-	public void updateCharter(Charter charter);
-	public List<Charter> listarCharter();
-	public void deleteCharter(Charter charter);
+	public void createCharter(Charter charter) throws SQLException;
+	public void updateCharter(Charter charter) throws SQLException;
+	public List<Charter> listarCharter() throws SQLException;
+	public void deleteCharter(Charter charter) throws SQLException;
 
 }
