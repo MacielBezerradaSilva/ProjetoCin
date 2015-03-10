@@ -4,6 +4,7 @@
 package management;
 
 import gui.EntryPoint;
+import gui.ListCharters;
 import gui.NewCharterPanelForm;
 
 import java.awt.event.ActionEvent;
@@ -59,5 +60,13 @@ public class ActionListenerGenerator {
             }
         };
     }
+    
+    public ActionListener generateListCharterListener(final EntryPoint frame) {
+        return new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                frame.switchToPanel(new ListCharters());
+            }
+        };
+    }    
 
 }

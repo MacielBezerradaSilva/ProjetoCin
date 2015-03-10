@@ -251,23 +251,26 @@ public class EntryPoint extends JFrame{
 		JMenuItem openSession = new JMenuItem(requestManager.loadProperty(language + "_ET_Option_2"));
 		JMenuItem closeSession = new JMenuItem(requestManager.loadProperty(language + "_ET_Option_3"));
 		JMenuItem newCharter = new JMenuItem(requestManager.loadProperty(language + "_ET_Option_3.1"));
+		JMenuItem listCharter = new JMenuItem(requestManager.loadProperty(language + "_ET_Option_5"));
 		JMenuItem exit = new JMenuItem(requestManager.loadProperty(language + "_ET_Option_4"));
 
 		newSession.setIcon(new ImageIcon("images/new_session_icon.jpg"));
 		openSession.setIcon(new ImageIcon("images/open_session_icon.jpg"));
 		closeSession.setIcon(new ImageIcon("images/close_session_icon.jpg"));
 		newCharter.setIcon(new ImageIcon("images/new_session_icon.jpg"));
+		listCharter.setIcon(new ImageIcon("images/new_session_icon.jpg"));
 		exit.setIcon(new ImageIcon("images/exit_icon.jpg"));
 
 		openSession.addActionListener(actionListenerGenerator.generateNewSessionBySpreadSheetListener());
 		exit.addActionListener(actionListenerGenerator.generateExitListener());
-		//newSession.addActionListener(actionListenerGenerator.generateNewSessionListener(this));
+//		newSession.addActionListener(actionListenerGenerator.generateNewSessionListener(this));
 		newCharter.addActionListener(actionListenerGenerator.generateNewCharterListener(this));
+		listCharter.addActionListener(actionListenerGenerator.generateListCharterListener(this));
 
 		options.add(newSession);
 		options.add(openSession);
 		options.add(newCharter);
-		//options.add(closeSession);
+		options.add(listCharter);
 		options.add(exit);
 
 		return options;
