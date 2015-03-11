@@ -71,10 +71,10 @@ public class CharterDao implements ICharterDao{
 			java.sql.Timestamp dt = new java.sql.Timestamp(rs.getDate("CREATIONDATE").getTime());
 			charter.setCreationDate(dt);
 			charters.add(charter);
-			conexao.desconectar();
 		}
 		rs.close();
 		pStatement.close();
+		conexao.desconectar();
 		
 		return charters;
 	}
