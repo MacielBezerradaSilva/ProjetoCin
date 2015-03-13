@@ -46,10 +46,10 @@ import javax.xml.transform.TransformerException;
 
 import management.ActionListenerGenerator;
 import management.RequestManager;
-import model.ExploratoryTestCase;
 import Thread.DateThread;
 import Thread.LoadSheetThread;
 import Thread.ObjectCleanerThread;
+import entity.ExploratoryTestCase;
 import factory.XMLFileManagerFactory;
 
 /**

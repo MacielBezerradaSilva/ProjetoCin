@@ -8,7 +8,7 @@ import java.util.List;
 
 import javax.swing.table.AbstractTableModel;
 
-import model.Charter;
+import entity.Charter;
 import ConexaoBD.Conexao;
 
 public class CharterDao implements ICharterDao{

@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 
 import javax.swing.JProgressBar;
 
-import model.Session;
+import entity.Session;
 
 /**
  * @author Maciel B

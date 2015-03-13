@@ -1,7 +1,7 @@
 /**
  * 
  */
-package model;
+package entity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,6 +47,19 @@ public class Session {
 	@Column(name="currenttime")
 	private int currentTime;
 
+	
+	public Session(Charter c)
+	{
+		this.id = 0;
+		this.testerId = 0;
+		this.testerName = "";
+		this.duration = "";
+		this.comments = "";
+		this.charter = c;
+		this.product = new Product();
+		this.issues = new ArrayList<Issue>();
+		this.currentTime = 0;		
+	}
 	public Session(){
 		this.id = 0;
 		this.testerId = 0;

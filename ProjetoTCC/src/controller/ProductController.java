@@ -2,7 +2,7 @@ package controller;
 
 import dao.IProduct;
 import dao.ProductDao;
-import model.Product;
+import entity.Product;
 
 /**
  *

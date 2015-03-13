@@ -6,7 +6,7 @@ package controller;
 import java.sql.SQLException;
 import java.util.List;
 
-import model.Charter;
+import entity.Charter;
 
 /**
  * @author Maciel B

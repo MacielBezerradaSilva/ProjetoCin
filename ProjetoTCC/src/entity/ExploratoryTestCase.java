@@ -1,7 +1,7 @@
 /**
  * 
  */
-package model;
+package entity;
 
 /**
  * @author Maciel B

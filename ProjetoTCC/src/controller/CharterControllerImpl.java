@@ -6,9 +6,9 @@ package controller;
 import java.sql.SQLException;
 import java.util.List;
 
-import model.Charter;
 import dao.CharterDao;
 import dao.ICharterDao;
+import entity.Charter;
 
 /**
  * @author Maciel B

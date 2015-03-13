@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Session;
+import entity.Session;
 import ConexaoBD.Conexao;
 
 /**
