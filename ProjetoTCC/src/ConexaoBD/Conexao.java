@@ -30,7 +30,7 @@ public class Conexao {
 		try {
 			Class.forName(driver);
 			con = java.sql.DriverManager.getConnection(databaseURL, user, password);
-			System.out.println("conexao executada com sucesso");
+			System.out.println("Conexão executada com sucesso");
 		} catch (ClassNotFoundException e) {
             // A call to Class.forName() forces us to consider this exception
             System.out.println("Firebird JCA-JDBC driver not found in class path");

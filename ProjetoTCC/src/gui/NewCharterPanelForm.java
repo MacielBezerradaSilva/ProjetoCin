@@ -2,6 +2,7 @@ package gui;
 
 import controller.CharterControllerImpl;
 import controller.ICharterController;
+import entity.Charter;
 import execution.Util;
 
 import java.io.IOException;
@@ -11,7 +12,6 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 import management.RequestManager;
-import model.Charter;
 
 /**
  *

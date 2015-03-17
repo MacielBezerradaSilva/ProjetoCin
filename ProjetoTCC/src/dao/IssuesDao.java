@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Issue;
+import entity.Issue;
 import ConexaoBD.Conexao;
 
 

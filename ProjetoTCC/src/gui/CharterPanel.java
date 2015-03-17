@@ -11,8 +11,8 @@ import javax.swing.JPanel;
 
 import org.apache.poi.hssf.record.chart.ChartRecord;
 
+import entity.Charter;
 import management.RequestManager;
-import model.Charter;
 
 /**
  * @author Maciel B

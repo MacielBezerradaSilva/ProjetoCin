@@ -5,7 +5,7 @@ package dao;
 
 import java.io.FileNotFoundException;
 
-import model.Session;
+import entity.Session;
 
 /**
  * @author Maciel B
