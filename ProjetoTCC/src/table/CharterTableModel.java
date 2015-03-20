@@ -3,6 +3,7 @@ package table;
 import java.util.List;
 
 import javax.swing.table.AbstractTableModel;
+import javax.swing.table.TableColumn;
 
 import entity.Charter;
 
@@ -11,6 +12,7 @@ import entity.Charter;
  * @author Flavio Santos
  *
  */
+//classe utilizada para passar os valores dos charters
 public class CharterTableModel extends AbstractTableModel {
 	
 	private static final int ID = 0;
@@ -18,9 +20,11 @@ public class CharterTableModel extends AbstractTableModel {
 	private static final int OBJECTIVE = 2;
 	private static final int MAX_TIME = 3;
 	private static final int MIN_TIME = 4;
+	private TableColumn column;
 
-	private String[] colunas = new String[]{"Id", "Nome", "Objetivo", "Tempo Minímo", "Tempo Máximo"};
+	private String[] colunas = new String[]{"Id", "Nome", "Objetivo", "Tempo Minímo", "Tempo Máximo", "Ações"};
 	
+	//lista responsavel por armazenar os valores do charter
 	private List<Charter> valores;
 	
 	public CharterTableModel(List<Charter> valores) {

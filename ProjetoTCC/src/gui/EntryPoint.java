@@ -28,6 +28,7 @@ import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -42,7 +43,6 @@ import javax.swing.JTextArea;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import javax.xml.transform.TransformerException;
 
 import management.ActionListenerGenerator;
 import management.RequestManager;
@@ -76,6 +76,8 @@ public class EntryPoint extends JFrame{
 	private JTextArea textArea2;
 	private JTextArea textArea3;
 	private JList tcList;
+	private JButton btExcluir;
+	private JButton btEditar;
 	private List<ExploratoryTestCase> loadedTestCases;
 	private JPanel currentPanel;
 
@@ -101,7 +103,6 @@ public class EntryPoint extends JFrame{
 				languageSelection = 1;
 			}
 			xMLFileManagerFactory.createLanguageFile(language, false);
-
 		} else {
 			language = xMLFileManagerFactory.readLanguage();
 			languageSelection = (language.equalsIgnoreCase("BR") ? 0 : 1);

@@ -10,48 +10,50 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTable;
+import javax.swing.table.TableColumnModel;
 
+import table.ButtonColumn;
 import table.CharterTableModel;
 import controller.CharterControllerImpl;
 
 public class ListCharters extends javax.swing.JPanel  {
 		
 	private CharterControllerImpl charter;
-    private JButton btnNew, btnSave, btnUpdate, btnRemove, btnCancel;
-	private CharterTableModel model;
+    private JButton btnEditar, btnRemove;
+	private CharterTableModel model, model1;
 	private static JTable _table;
 	private static JPanel panelButtons;
+	private static TableColumnModel columnModel;
+	private ButtonColumn btColumn;
 	
 	public ListCharters(){		
         ClassLoader loader = getClass().getClassLoader();
-        btnNew = new JButton(new ImageIcon(loader.getResource("img/new.png")));
-        btnSave = new JButton(new ImageIcon(loader.getResource("img/save.png")));
-        btnCancel = new JButton(new ImageIcon(loader.getResource("img/cancel.png")));
         btnRemove = new JButton(new ImageIcon(loader.getResource("img/trash.png")));
-        btnUpdate = new JButton(new ImageIcon(loader.getResource("img/edit.png")));
-		
+        btnEditar = new JButton(new ImageIcon(loader.getResource("img/edit.png")));
 	    charter = new CharterControllerImpl();
-		try {
+	    
+	    try {
+	    	//passando a lista pelo construtor
 			model = new CharterTableModel(charter.listarCharter());
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	    _table = new JTable(model);	    
+	    //setando no table os valores do model
+	    _table = new JTable(model);
+	    //btColumn = new ButtonColumn(_table,4);
+	 
 	    
-	    panelButtons = new JPanel();
-        panelButtons.setBorder(BorderFactory.createEtchedBorder());
+	    //panelButtons = new JPanel();
+       // panelButtons.setBorder(BorderFactory.createLoweredBevelBorder());
 	    
-	    this.add(_table, BorderLayout.CENTER);
-        this.setBounds(5, 150, 480, 240);
+	    this.add(_table, BorderLayout.EAST);
+        this.setBounds(5, 50, 100, 100);
         this.setBorder(BorderFactory.createTitledBorder("Lista de Charters"));
-        
-		panelButtons.add(btnNew, "gapleft 90");
-		panelButtons.add(btnCancel);
-		panelButtons.add(btnSave, "gap unrelated");
-		panelButtons.add(btnUpdate, "gap unrelated");
-		panelButtons.add(btnRemove);
-		panelButtons.setBounds(5, 105, 480, 40);
+       
+		//panelButtons.add(btnEditar, "gap unrelated");
+		//panelButtons.add(btnRemove);
+		//panelButtons.setBounds(5, 105, 480, 40);
 	}
 	
 	public static void main(String args[]) {

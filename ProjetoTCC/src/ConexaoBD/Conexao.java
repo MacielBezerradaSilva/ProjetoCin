@@ -3,14 +3,11 @@
  */
 package ConexaoBD;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Conexao {
 	
-	private static final String dir = "D:/projetos/TCC/ProjetoCin/ProjetoTCC/db/DBEXPLORATORIO.FDB";
+	private static final String dir = "C:/DBEXPLORATORIO.FDB";
 	private static final String driver = "org.firebirdsql.jdbc.FBDriver";
 	private static final String databaseURL = "jdbc:firebirdsql:localhost:" + dir;
 	private static final String user = "root";
